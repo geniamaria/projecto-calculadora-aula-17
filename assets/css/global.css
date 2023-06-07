@@ -1,0 +1,46 @@
+.exercicios {
+    background-color: rgba(0, 0, 255, 0.4);
+    border: solid 1px blue;
+    margin: 10px 2px;
+}
+
+.exercicios p, .exercicios code {
+    font-weight: bold;
+}
+
+
+.section-calculador {
+    width: 50%;
+    height: 500px;
+    margin:100px auto;
+    display: grid;
+    grid-template-columns: auto auto auto  auto;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    
+}
+
+.section-calculador div {
+    text-align: center;
+    font-weight: bolder;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    border: solid 2px;
+}
+#item-1{
+    grid-column: 1 / 4;
+    width: 600px;
+    height: 100px;
+}
+
+
+.item-6{
+    grid-row: 2 / 5;
+    
+    width: 500px;
+    height: 100px;
+    color: brown;
+}
