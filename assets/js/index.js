@@ -1,70 +1,74 @@
-let opçãoEscolhida;
+let opcaoEscolhida;
 let nr1, nr2;
-let subtrair, multiplicar, dividir, resultado;
+
+
+let add = function (nr1, nr2) {
+    let soma = nr1 + nr2;
+
+    return soma;
+}
+let subtract = function (nr1, nr2) {
+    let subtract = nr1 - nr2;
+
+    return subtract;
+}
+let multiply = function (nr1, nr2) {
+    let multiply = nr1 * nr2;
+
+    return multiply;
+}
+let divide = function (nr1, nr2) {
+    let divide  = nr1 / nr2;
+
+    return divide ;
+}
 
 
 while (true) {
-    opção = prompt(`
+    opcao = prompt(`
     
     Escolha a opcao: 
     1. Adicionar 
-    2. Subtrair 
-    3. Multiplicar
-    4. dividir
+    2. subtract 
+    3. multiply
+    4. divide 
     5. Sair
     `);
 
     //converter a opcao para number
-    opçãoEscolhida = Number(opção);
+    opcaoEscolhida = Number(opcao);
 
-    if (opçãoEscolhida == 5) {
+    if (opcaoEscolhida == 5) {
         break;
     }
-    switch (opçãoEscolhida) {
+    switch (opcaoEscolhida) {
         case 1:
             nr1 = Number(prompt("escreva o numero"));
             nr2 = Number(prompt("escreva o numero"));
-           
-            console.log(somarNumeros(nr1, nr2));
+
+            console.log(add(nr1, nr2));
             break;
         case 2:
             nr1 = Number(prompt("escreva o numero"));
             nr2 = Number(prompt("escreva o numero"));
-            resultado = Subtrair(nr1, nr2);
+            console.log( subtract(nr1, nr2));
             break;
         case 3:
             nr1 = Number(prompt("escreva o numero"));
             nr2 = Number(prompt("escreva o numero"));
-            resultado = Multiplicar(nr1, nr2);
+            console.log(multiply(nr1, nr2));
 
             break;
         case 4:
             nr1 = Number(prompt("escreva o numero"));
             nr2 = Number(prompt("escreva o numero"));
-            resultado = dividir(nr1, nr2);
+            console.log(divide (nr1, nr2));
             break;
         default:
-            console.log("Opção invalida.");
+            console.log("opcao invalida.");
             break;
 
     }
-}
-let somarNumeros = function (nr1, nr2) {
-    let soma = nr1 + nr2;
-    
-    return soma;
-    }
-function Subtrair(nr1, nr2) {
-    subtração = nr1 - nr2;
-    return subtração;
-}
-function Multiplicar(nr1, nr2) {
-    multiplicação = nr1 - nr2;
-    console.log(multiplicação);
-}
-function Dividir(nr1, nr2) {
-    divisão = nr1 / nr2;
-    return divisão;
 }
 
 
