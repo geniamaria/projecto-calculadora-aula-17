@@ -1,7 +1,3 @@
-let opcaoEscolhida;
-let nr1, nr2;
-
-
 let add = function (nr1, nr2) {
     let soma = nr1 + nr2;
 
@@ -23,54 +19,70 @@ let divide = function (nr1, nr2) {
     return divide ;
 }
 
+let conteudo = "";
+let numero1;
+let numero2;
 
-while (true) {
-    opcao = prompt(`
+let operacao;
+
+let tela = document.getElementById("tela");
+
+function numeroPressionado(numero) {
+    //inserir a tag H1 dentro da tela
+    conteudo = conteudo + numero;
+    tela.innerHTML = conteudo;
+
+    //estilizar a tag H1 e a tela
+    tela.style.padding = "0";
+}
+
+function operacaoPressionada(sinal) {
     
-    Escolha a opcao: 
-    1. Adicionar 
-    2. subtract 
-    3. multiply
-    4. divide 
-    5. Sair
-    `);
-
-    //converter a opcao para number
-    opcaoEscolhida = Number(opcao);
-
-    if (opcaoEscolhida == 5) {
-        break;
-    }
-    switch (opcaoEscolhida) {
-        case 1:
-            nr1 = Number(prompt("escreva o numero"));
-            nr2 = Number(prompt("escreva o numero"));
-
-            console.log(add(nr1, nr2));
+    switch (sinal) {
+        case 'c':
+            tela.innerHTML = "";
             break;
-        case 2:
-            nr1 = Number(prompt("escreva o numero"));
-            nr2 = Number(prompt("escreva o numero"));
-            console.log( subtract(nr1, nr2));
+        case '+':
+                numero1 = Number(conteudo);
+                conteudo = "";
+                tela.innerHTML = "";
+                operacao = "+";
             break;
-        case 3:
-            nr1 = Number(prompt("escreva o numero"));
-            nr2 = Number(prompt("escreva o numero"));
-            console.log(multiply(nr1, nr2));
-
+        case '-':
+            numero1 = Number(conteudo);
+            conteudo = "";
+            tela.innerHTML = "";
+            operacao = "-";
             break;
-        case 4:
-            nr1 = Number(prompt("escreva o numero"));
-            nr2 = Number(prompt("escreva o numero"));
-            console.log(divide (nr1, nr2));
-            break;
+         case '×':
+                numero1 = Number(conteudo);
+                conteudo = "";
+                tela.innerHTML = "";
+                operacao = "×";
+                break;
         default:
-            console.log("opcao invalida.");
             break;
-
     }
 }
 
+function resultado() {
+    switch (operacao) {
+        case "+":
+            numero2 = Number(tela.innerHTML);
+            tela.innerHTML = add(numero1, numero2);
+            break;
+        case "-":
+            numero2 = Number(tela.innerHTML);
+            tela.innerHTML = subtract(numero1, numero2);
+            break;
+            case "×":
+                numero2 = Number(tela.innerHTML);
+                tela.innerHTML = multiplyt(numero1, numero2);
+                break;
+        default:
+            break;
+    }
+}
 
 
 

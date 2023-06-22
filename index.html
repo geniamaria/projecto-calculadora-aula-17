@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="exercicios">
+    <!--<div class="exercicios">
         <h1>Exercicio 5: Projecto Calculadora</h1>
         <p>
             Neste projecto deve-se contruir uma calculadora baseada em web.
@@ -58,29 +58,34 @@
                 Adicione o usuario "Jay-Ubisse" como colabrador do projecto no github.
             </li>
         </ol>
-    </div>
+    </div>-->
     <div class="section-calculador">
         
 
-            <div id="item-1">1</div>
+            <div id="item-1">
+                <div id="tela">
+                    
+                </div>
+            </div>
            
             <div id="item-3" ></div>
-            <div >4</div>
-            <div >5</div>
-            <div >1</div>
-            <div >3</div>
-            <div >4</div>
-            <div >5</div>
-            <div >1</div>
-            <div >2</div>
-            <div >3</div>
-            <div >4</div>
-            <div >5</div>
-            <div>6</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div >=</div>         
+            <div class="botao" onclick="numeroPressionado(1)">1</div>
+            <div class="botao" onclick="numeroPressionado(2)">2</div>
+            <div class="botao" onclick="numeroPressionado(3)">3</div>
+            <div class="item-borda botao" onclick="operacaoPressionada('c')">C</div>
+            <div class="botao" onclick="numeroPressionado(4)">4</div>
+            <div class="botao" onclick="numeroPressionado(5)">5</div>
+            <div class="botao" onclick="numeroPressionado(6)">6</div>
+            <div class="item-borda botao" onclick="operacaoPressionada('+')">+</div>
+            <div class="botao" onclick="numeroPressionado(7)">7</div>
+            <div class="botao" onclick="numeroPressionado(8)">8</div>
+            <div class="botao" onclick="numeroPressionado(9)">9</div>
+            <div class="item-borda botao" onclick="operacaoPressionada('-')">-</div>
+            <div class="botao">.</div>
+            <div class="botao" onclick="operacaoPressionada('×')">×</div>
+            <div class="botao">÷</div>
+            <div class="item-borda botao" onclick="resultado('=')">=</div>
+                    
     </div>
 
     <script src="./assets/js/index.js"></script>
