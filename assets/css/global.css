@@ -26,7 +26,6 @@
 }
 #item-1{
     grid-column: 1 / 4;
-   border: none;
    background-color: aliceblue;
     display: flex;
     justify-content: center;
@@ -36,6 +35,7 @@
 }
 #tela {
     width: 89%;
+    border: solid 1px ;
     height: fit-content;
     border: none;
     background-color: transparent;

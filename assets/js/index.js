@@ -60,6 +60,17 @@ function operacaoPressionada(sinal) {
                 tela.innerHTML = "";
                 operacao = "×";
                 break;
+        case '÷':
+                    numero1 = Number(conteudo);
+                    if(numero1 == 0){
+                        alert("invalid number");
+                    }else{
+                        conteudo = "";
+                    tela.innerHTML = "";
+                    operacao = "÷";
+                    }
+                    
+                    break;
         default:
             break;
     }
@@ -75,10 +86,14 @@ function resultado() {
             numero2 = Number(tela.innerHTML);
             tela.innerHTML = subtract(numero1, numero2);
             break;
-            case "×":
-                numero2 = Number(tela.innerHTML);
-                tela.innerHTML = multiplyt(numero1, numero2);
-                break;
+        case "×":
+            numero2 = Number(tela.innerHTML);
+            tela.innerHTML = multiply(numero1, numero2);
+            break;
+            case "÷":
+            numero2 = Number(tela.innerHTML);
+            tela.innerHTML = divide(numero1, numero2);
+            break;
         default:
             break;
     }
